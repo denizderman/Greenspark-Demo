@@ -1,0 +1,40 @@
+.panel {
+  background-color: $color-alabaster;
+  width: 90%;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px 1px rgba(0, 0, 0, 0.1);
+
+  &__title {
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
+  }
+
+  &__line {
+    margin-top: 10px;
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 2px solid $color-silver-chalice;
+    margin: 10px 0 20px;
+    padding: 0;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .panel {
+    max-width: 851px;
+    padding: 30px 30px 130px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+
+    &__title {
+      text-align: left;
+    }
+  }
+}

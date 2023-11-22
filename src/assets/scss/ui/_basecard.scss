@@ -1,0 +1,87 @@
+.card {
+  &__list {
+    list-style: none;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  &__header {
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__info {
+    font-size: 12px;
+    line-height: 15px;
+    margin-left: 10px;
+  }
+
+  &__target {
+    font-size: 17px;
+    line-height: 21px;
+    font-weight: 700;
+  }
+
+  &__wrapper {
+    margin-bottom: 20px;
+  }
+
+  &__actions {
+    color: $color-amazon;
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  &__action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    position: relative;
+  }
+
+  &__checkbox {
+    width: 20px;
+    height: 20px;
+
+    &.active {
+      accent-color: $color-amazon;
+    }
+  }
+
+  &__badge-colors {
+    list-style: none;
+    display: flex;
+
+    button {
+      margin-right: 2px;
+      padding: 10px;
+      border: none;
+
+      &.is-active {
+        border: 3px solid $color-silver-chalice;
+      }
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .card {
+    &__list {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__wrapper {
+      width: 221px;
+    }
+  }
+}

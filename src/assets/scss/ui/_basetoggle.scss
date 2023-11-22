@@ -1,0 +1,60 @@
+.toggle {
+  display: inline-block;
+  vertical-align: middle;
+
+  input {
+    margin-left: -999.9rem;
+    position: absolute;
+    visibility: hidden;
+  }
+
+  input + label {
+    border: 1px solid $color-opal;
+    border-radius: 60px;
+    cursor: pointer;
+    display: block;
+    height: 23px;
+    outline: none;
+    padding: 2px;
+    position: relative;
+    transition: background 0.3s;
+    user-select: none;
+    width: 46px;
+
+    &::before,
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+    }
+
+    &::before {
+      background-color: $color-alabaster;
+      border-radius: 3rem;
+      inset: 0rem;
+      transition: background 0.3s;
+    }
+
+    &::after {
+      background-color: $color-alabaster;
+      border: 1px solid $color-merino;
+      border-radius: 66px;
+      top: -1px;
+      bottom: -1px;
+      left: -1px;
+      width: 22px;
+      transition:
+        margin 0.3s,
+        background 0.3s;
+    }
+  }
+
+  input:checked + label::after {
+    border: 1px solid $color-amazon;
+    margin-left: 1.5rem;
+  }
+
+  input:checked + label::before {
+    background-color: $color-amazon;
+  }
+}
